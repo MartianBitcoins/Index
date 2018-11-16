@@ -1,0 +1,26 @@
+{
+  "name": "ss-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon server.js",
+    "up-dev": "docker container run -p 3000:3000 --network=ss-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src ss-api-dev",
+    "build-dev": "docker build -t ss-api-dev --file Dockerfile.dev .",
+    "build-mongo-dev": "docker network create -d bridge ss-network || true && docker run -it --name ss-mongo -p 27017:27017 --network=ss-network mongo:3.6.8-stretch",
+    "start-mongo-dev": "docker container start ss-mongo"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
+    "got": "^9.2.2",
+    "mongoose": "^5.3.4",
+    "request": "^2.88.0",
+    "winston": "^2.4.0"
+  }
+}
