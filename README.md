@@ -1,5 +1,4 @@
-
-# Martian Bitcoins Index
+# Martian Bitcoins Index (MBI)
 
 Microservices
 
@@ -27,10 +26,25 @@ Note: Web-app renderer should not serve static files in the future, this should 
 __Database (Just development)__
 When using docker for development a postgreSQL container is created with the initial schema and some test data.
 
-# Development with Docker
+## Development
+
+Database
 
 ```sh
-clone repo
-cd dprnk
-docker-compose -f docker-compose.dev up
+docker network create -d bridge mbi-network
+docker run -it --name mbi-mongodb -p 27017:27017 --network=mbi-network mongo:3.6.8-stretch
+```
+
+API
+
+```sh
+npm run build-dev
+npm run up-dev
+```
+
+Web app
+
+```sh
+npm run build-dev
+npm run up-dev
 ```

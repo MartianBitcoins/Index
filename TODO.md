@@ -58,8 +58,9 @@
   - test endpoints √
 
 - Render server <<<======
-  - update all npm modules on hypernova
-  - Fix hypernova not returning App component data
+  - update all npm modules on hypernova X
+  - Fix hypernova not returning App component data X
+  - Remove hypernova, it sucks
 
 - Create API that connects to mongo and exposes queries
 - Add a query to ping database

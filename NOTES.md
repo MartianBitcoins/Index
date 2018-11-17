@@ -1,3 +1,4 @@
+
 __Call render server with empty state__
 curl -d '{"state":{}}' -H "Content-Type: application/json" -X POST http://localhost:4000/render
 

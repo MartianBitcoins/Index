@@ -5,9 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-dev": "docker build -t ss-web-app-dev --file Dockerfile.dev .",
-		"up-dev": "docker rm ss-web-app || true && docker container run -p 4000:4000 --name ss-web-app --network=ss-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src ss-web-app-dev",
-		"hyp-start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/hypernova.js --exec babel-node",
+		"build-dev": "docker build -t mbi-web-app-dev --file Dockerfile.dev .",
+		"up-dev": "docker rm mbi-web-app-dev || true && docker container run -p 4000:4000 --name mbi-web-app-dev --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-web-app-dev",
 		"web-start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/server.js"
 	},
 	"author": "",
@@ -19,9 +18,6 @@
 		"babel-polyfill": "6.26.0",
 		"babel-register": "^6.26.0",
 		"cerebral": "^5.0.1",
-		"hypernova": "^2.3.0",
-		"hypernova-client": "^1.1.0",
-		"hypernova-react": "^2.1.0",
 		"koa": "^2.5.3",
 		"koa-bodyparser": "^4.2.1",
 		"koa-mount": "^3.0.0",

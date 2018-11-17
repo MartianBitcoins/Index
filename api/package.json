@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon server.js",
-    "up-dev": "docker container run -p 3000:3000 --network=ss-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src ss-api-dev",
-    "build-dev": "docker build -t ss-api-dev --file Dockerfile.dev .",
-    "build-mongo-dev": "docker network create -d bridge ss-network || true && docker run -it --name ss-mongo -p 27017:27017 --network=ss-network mongo:3.6.8-stretch",
-    "start-mongo-dev": "docker container start ss-mongo"
+    "up-dev": "docker container run -p 3000:3000 --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-api-dev",
+    "build-dev": "docker build -t mbi-api-dev --file Dockerfile.dev ."
   },
   "author": "",
   "license": "ISC",

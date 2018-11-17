@@ -1,18 +1,18 @@
-# Simple Startup Boilerplate
+# Martian Bitcoins Index Database MongoDB
 
 ## Development
 
-Start mongodb in docker and join ss-network
+Start mongodb in docker and join mbi-network
 
 ```sh
-docker network create -d bridge ss-network
-docker run -it --name ss-mongo -p 27017:27017 --network=ss-network mongo:3.6.8-stretch
+docker network create -d bridge mbi-network
+docker run -it --name mbi-mongodb -p 27017:27017 --network=mbi-network mongo:3.6.8-stretch
 ```
 
 ## Watch logs
 
 ```sh
-docker exec -it ss-mongo bash
+docker exec -it mbi-mongodb bash
 docker logs some-mongo
 mongo
 ```

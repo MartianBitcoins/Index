@@ -10,7 +10,7 @@ module.exports = ({ production, body }) => `
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   </head>
   <body>
-    <div id="app3">${body}</div>
+    <div id="app">${body}</div>
     <script src="/client_bundle.js"></script>
   </body>
 </html>

@@ -18,6 +18,7 @@ const router = new Router()
 
 // Serve compiled javascript client file on development
 if (config.isDeveloping) {
+  console.warning('Running in DEVELOPMENT mode!')
   // Create webpack compiler for the client APP
   const webpackConfig = require('../webpack_config/dev')
   // console.log('webpackConfig', webpackConfig)
