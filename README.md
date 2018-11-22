@@ -28,18 +28,40 @@ When using docker for development a postgreSQL container is created with the ini
 
 ## Development
 
-Database
+### Database
+
+Create Database
 
 ```sh
 docker network create -d bridge mbi-network
 docker run -it --name mbi-mongodb -p 27017:27017 --network=mbi-network mongo:3.6.8-stretch
 ```
 
-API
+Start Database
+
+```sh
+docker start mbi-mongodb
+```
+
+Attach Database stdin
+
+```sh
+docker attach mbi-mongodb
+```
+
+### API
+
+Create API Container
 
 ```sh
 npm run build-dev
 npm run up-dev
+```
+
+Start API Container
+
+```sh
+
 ```
 
 Web app

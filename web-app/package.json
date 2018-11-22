@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build-dev": "docker build -t mbi-web-app-dev --file Dockerfile.dev .",
-		"up-dev": "docker rm mbi-web-app-dev || true && docker container run -p 4000:4000 --name mbi-web-app-dev --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-web-app-dev",
-		"web-start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/server.js"
+		"up-dev": "docker rm mbi-web-app-dev || true && docker container run -p 4000:4000 --name mbi-web-app --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-web-app-dev",
+		"web-start-dev": "npx babel ./app --out-dir ./app-build --plugins=babel-plugin-cerebral && env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/server.js & npx babel ./app --watch --out-dir ./app-build --plugins=babel-plugin-cerebral"
 	},
 	"author": "",
 	"license": "ISC",
@@ -15,6 +15,7 @@
 		"@cerebral/react": "^4.0.1",
 		"babel-core": "6.26.0",
 		"babel-loader": "7.1.2",
+		"babel-plugin-cerebral": "^1.0.1",
 		"babel-polyfill": "6.26.0",
 		"babel-register": "^6.26.0",
 		"cerebral": "^5.0.1",

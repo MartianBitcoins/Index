@@ -60,7 +60,8 @@
 - Render server <<<======
   - update all npm modules on hypernova X
   - Fix hypernova not returning App component data X
-  - Remove hypernova, it sucks
+  - Remove hypernova, it sucks √
+  - run a basic vainilla render server
 
 - Create API that connects to mongo and exposes queries
 - Add a query to ping database

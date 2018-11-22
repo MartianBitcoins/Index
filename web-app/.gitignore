@@ -4,6 +4,7 @@ public/assets/fonts/ruby-icons.*
 app/icons/_styles.scss
 node_modules/*
 build/*
+app-build/*
 
 npm-debug.log
 
