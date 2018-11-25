@@ -1,23 +1,26 @@
 import React from 'react'
-// import { state } from 'cerebral/proxy'
-// import { connect } from '@cerebral/react'
+import { state } from 'cerebral'
+import { connect } from '@cerebral/react'
+import pages from './Pages'
+import GlobalReset from './GlobalReset'
+import { App as AppWrapper } from './styled'
 
-// export default connect(
-//   {
-//     foo: state.foo
-//   },
-//   function App({ foo }) {
-//     return (
-//       <div>
-//         foo: {foo}
-//       </div>
-//     )
-//   }
-// )
+export default connect({
+  currentPage: state.currentPage,
+}, function App({ currentPage }) {
 
-export default function App() {
-  console.log('[App Component] render')
+  let Page = pages[currentPage]
+
+  if (!Page) {
+    // TODO: Redirect to error page
+    throw new Error(`Page ${currentPage} does not exists`)
+  }
+
+  console.log('[App Component] render()')
   return (
-    <div>Martian Bitcoins Infrastructure Complete!!!</div>
+    <AppWrapper>
+      <Page/>
+      <GlobalReset/>
+    </AppWrapper>
   )
-}
+})

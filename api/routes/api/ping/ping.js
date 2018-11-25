@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const expressAsyncHandler = require('express-async-handler')
-const logger = require('../../lib/logger')
+const logger = require('../../../lib/logger')
 
 async function pingGET (req, res) {
   logger.info('/ping route called')

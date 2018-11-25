@@ -3,8 +3,9 @@ const express = require('express')
 const router = express.Router()
 require('./lib/mongoose')
 
-const pingRoutes = require('./routes/ping')
-const homeRoutes = require('./routes/home')
+const pingRoutes = require('./routes/api/ping')
+const homeRoute = require('./routes/home')
+const healthRoute = require('./routes/health')
 
 const { api: { port: apiPort }, render: { host: renderHost, port: renderPort }} = require('./config')
 const internalErrorMiddleware = require('./middleware/internal-error')
@@ -18,10 +19,11 @@ const app = express()
 app.set('x-powered-by', false)
 
 // Test ping route
-router.get('/ping', pingRoutes.ping)
+router.post('/api/ping', pingRoutes.ping)
 
 // Web APP routes
-router.get('/', homeRoutes.home)
+router.get('/', homeRoute)
+router.get('/health', healthRoute)
 
 // Static files
 // Redirect the rest of the GET calls to the render server (serve static files)

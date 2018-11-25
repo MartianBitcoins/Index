@@ -7,11 +7,12 @@ const { render: renderConfig } = require('../config')
  **/
 module.exports = async function render({ state = {} }) {
   let renderRes
+
   try {
     renderRes = await got.post(
       `http://${renderConfig.host}:${renderConfig.port}/render`,
       {
-        body: state,
+        body: { state },
         json: true,
         throwHttpErrors: false,
       }

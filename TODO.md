@@ -57,30 +57,32 @@
   - update queries √
   - test endpoints √
 
-- Render server <<<======
+- Render server √
   - update all npm modules on hypernova X
   - Fix hypernova not returning App component data X
   - Remove hypernova, it sucks √
-  - run a basic vainilla render server
+  - run a basic vainilla render server √
+  - Create coming soon page using initial state √
+  - Add a ping route with state from the database that renders that state √
+    - create page comming soon and figure out how to put initial state on the app √
+  - add prettier and prettier config to web-app and api √
 
-- Create API that connects to mongo and exposes queries
-- Add a query to ping database
+- Add styled components √
+- Update babel, webpack, etc. √
+
+- Mock up the coming soon page √
+  - create assets folder and serve it √
+
+- Update html title √
+
+- Create server in DO, clone the repo, start the app and redirect domain to it √
+
+- Set log formatters to render-server winston
+
+
+
 - Configure docker swarm in DO server
 - try to deploy it using swarn docker
-
-- Add separation of postgresql queries and mongodb queries in api
-- Add
-- replace koa.js with express.js and async handler
-
-
-- Check docker-compose
-- Check each docker file
-- Check api code
-- Check web-app code
-- Boot up everything with docker-compose and fix bugs
-- test everything
-- improve logging
-- commit first version
 
 - lint
   - Add unused variable detection
@@ -91,7 +93,3 @@
 Fix problem when hypernova server is not running there is no error!!
 
 Docker reference architecture - https://success.docker.com/Architecture/Docker_Reference_Architecture%3A_Development_Pipeline_Best_Practices_Using_Docker_EE
-
-https://platform9.com/blog/kubernetes-vs-ecs/
-
-https://kubernetes.io/docs/getting-started-guides/aws/

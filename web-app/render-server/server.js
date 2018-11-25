@@ -4,7 +4,6 @@ const Router = require('koa-router')
 const mount = require('koa-mount')
 const serve = require('koa-static')
 const bodyParser = require('koa-bodyparser')
-const convert = require('koa-convert')
 const webpack = require('webpack')
 const webpackMiddleware = require('koa-webpack-dev-middleware')
 const logger = require('./lib/logger')
@@ -21,9 +20,7 @@ if (config.isDeveloping) {
   console.log('[WARNING] running in DEVELOPMENT mode!')
   // Create webpack compiler for the client APP
   const webpackConfig = require('../webpack_config/dev')
-  // console.log('webpackConfig', webpackConfig)
   const compiler = webpack(webpackConfig)
-  // console.log('compiler', compiler)
   // Wrap the compiler in a a middleware that listen for changes and recompile
   // delays requests until compiled
   const middleware = webpackMiddleware(compiler, {

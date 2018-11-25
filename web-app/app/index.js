@@ -6,6 +6,8 @@ import { Container } from '@cerebral/react'
 import AppComponent from './components/App'
 import main from './main'
 
+main.state = window.mbiState
+
 const app = App(main, {
   devtools: Devtools({
     host: 'localhost:8585'

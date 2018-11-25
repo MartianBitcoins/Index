@@ -1,7 +1,7 @@
 // const homeQueries = require('../../queries/home')
 const expressAsyncHandler = require('express-async-handler')
-const logger = require('../../lib/logger')
-const render = require('../../lib/render')
+const logger = require('../lib/logger')
+const render = require('../lib/render')
 
 async function homeGET (req, res) {
   logger.info('GET / route called')
