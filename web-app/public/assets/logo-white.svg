@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="199px" height="200px" viewBox="0 0 199 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+<svg width="213px" height="75px" viewBox="0 0 213 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
     <title>greenmartian.3</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="COOMING-SOON" transform="translate(-620.000000, -299.000000)">
-            <g id="greenmartian.3" transform="translate(621.000000, 300.000000)">
-                <g id="Greenmartian-2-colors">
-                    <g id="Bckground">
-                        <ellipse id="Oval-26" stroke="#FFFFFF" stroke-width="1.35" cx="98.4319011" cy="98.633735" rx="98.4319011" ry="98.633735"></ellipse>
-                        <polygon id="Star" fill="#FFFFFF" transform="translate(42.921749, 80.584516) rotate(48.000000) translate(-42.921749, -80.584516) " points="42.7572541 82.4205316 40.4598469 83.3243421 41.1167224 80.9403614 40.1875297 78.1175657 43.0862443 78.7485006 45.3836515 77.8446901 44.7267759 80.2286708 45.6559687 83.0514665"></polygon>
-                        <polygon id="Star" fill="#FFFFFF" transform="translate(30.853910, 63.795088) rotate(48.000000) translate(-30.853910, -63.795088) " points="30.7684892 67.3998143 25.6266249 69.6124807 27.5782269 64.5213992 25.0484217 58.5570838 31.4962091 60.1611168 36.081196 57.977695 34.6864713 63.0395319 36.6593992 69.0330919"></polygon>
-                        <polygon id="Star" fill="#FFFFFF" transform="translate(167.133434, 115.810850) rotate(48.000000) translate(-167.133434, -115.810850) " points="166.968939 117.646866 164.671532 118.550676 165.328407 116.166695 164.399214 113.3439 167.297929 113.974835 169.595336 113.071024 168.938461 115.455005 169.867653 118.2778"></polygon>
-                        <polygon id="Star" fill="#FFFFFF" transform="translate(116.355072, 22.656767) rotate(48.000000) translate(-116.355072, -22.656767) " points="116.190577 24.4927825 113.89317 25.396593 114.550045 23.0126123 113.620853 20.1898166 116.519567 20.8207515 118.816974 19.916941 118.160099 22.3009217 119.089292 25.1237174"></polygon>
+        <g id="LAnding-page-Copy-8-*-Copy" transform="translate(-39.000000, -29.000000)">
+            <g id="Hero-image">
+                <g id="greenmartian.3" transform="translate(40.000000, 30.000000)">
+                    <g id="Font" transform="translate(72.800000, 12.869945)" fill="#FFFFFF" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro" font-weight="300">
+                        <text id="Bitcoins" font-size="24" letter-spacing="1.466667">
+                            <tspan x="17" y="49">Bitcoins</tspan>
+                        </text>
+                        <text id="MARTIAN" font-size="28.8" letter-spacing="0.4">
+                            <tspan x="0" y="25.0786885">MARTIAN</tspan>
+                        </text>
                     </g>
-                    <g id="Body" transform="translate(58.590417, 55.579327)">
-                        <path d="M74.9957342,135.425684 C76.0373416,107.811989 76.5581453,89.807418 76.5581453,81.4119717 C76.5581453,45.4957077 63.7426596,12.5249187 37.8884699,12.5249187 C12.0342801,12.5249187 0.189383167,45.4957077 0.189383167,81.4119717 C0.189383167,89.8095656 0.189383167,107.292265 0.189383167,133.860069 C12.4834439,139.600657 25.0498061,142.470951 37.8884699,142.470951 C50.7271336,142.470951 63.0962217,140.122528 74.9957342,135.425684 Z" id="Oval-27" stroke="#FFFFFF" stroke-width="1.35"></path>
-                        <g id="Antena-izq" transform="translate(0.781206, 0.000000)">
-                            <path d="M8.20265842,9.00228533 L16.7959196,19.9615892" id="Line-5" stroke="#FFFFFF" stroke-width="2.3328" stroke-linecap="square"></path>
-                            <ellipse id="Oval-28" fill="#FFFFFF" cx="5.07783617" cy="5.08824823" rx="5.07783617" ry="5.08824823"></ellipse>
+                    <g id="Greenmartian-2-colors">
+                        <g id="Bckground">
+                            <ellipse id="Oval-26" stroke="#FFFFFF" stroke-width="0.5" cx="36.4" cy="36.4944819" rx="36.4" ry="36.4944819"></ellipse>
+                            <polygon id="Star" fill="#FFFFFF" transform="translate(15.872412, 29.816271) rotate(48.000000) translate(-15.872412, -29.816271) " points="15.8115817 30.4955967 14.9620033 30.8300066 15.2049151 29.9479337 14.8613007 28.9034993 15.9332419 29.1369452 16.7828204 28.8025353 16.5399086 29.6846082 16.8835229 30.7290426"></polygon>
+                            <polygon id="Star" fill="#FFFFFF" transform="translate(11.409739, 23.604182) rotate(48.000000) translate(-11.409739, -23.604182) " points="11.3781507 24.9379313 9.47669543 25.7566178 10.1983955 23.8729177 9.26287658 21.666121 11.6472607 22.2596132 13.3427834 21.4517471 12.8270158 23.3246268 13.5566022 25.542244"></polygon>
+                            <polygon id="Star" fill="#FFFFFF" transform="translate(61.805745, 42.850015) rotate(48.000000) translate(-61.805745, -42.850015) " points="61.7449151 43.5293402 60.8953366 43.8637501 61.1382484 42.9816773 60.794634 41.9372429 61.8665752 42.1706888 62.7161537 41.8362789 62.4732419 42.7183518 62.8168563 43.7627861"></polygon>
+                            <polygon id="Star" fill="#FFFFFF" transform="translate(43.027967, 8.383004) rotate(48.000000) translate(-43.027967, -8.383004) " points="42.9671373 9.06232952 42.1175588 9.3967394 42.3604706 8.51466654 42.0168563 7.47023215 43.0887975 7.70367805 43.9383759 7.36926818 43.6954641 8.25134104 44.0390785 9.29577543"></polygon>
                         </g>
-                        <g id="Antena-derecha" transform="translate(68.581315, 11.292240) rotate(3.000000) translate(-68.581315, -11.292240) translate(59.116709, 0.481430)">
-                            <path d="M0.390602782,9.78509275 L8.98386399,20.7443966" id="Line-5" stroke="#FFFFFF" stroke-width="2.3328" stroke-linecap="square" transform="translate(4.687233, 15.264745) scale(-1, 1) translate(-4.687233, -15.264745) "></path>
-                            <ellipse id="Oval-28" fill="#FFFFFF" transform="translate(12.108686, 5.088248) scale(-1, 1) translate(-12.108686, -5.088248) " cx="12.1086862" cy="5.08824823" rx="5.07783617" ry="5.08824823"></ellipse>
-                        </g>
-                        <g id="Big-eye" transform="translate(20.311345, 35.226334)">
-                            <ellipse id="Oval-29" stroke="#FFFFFF" stroke-width="1.35" cx="18.3583308" cy="18.3959744" rx="18.3583308" ry="18.3959744"></ellipse>
-                            <ellipse id="Oval-29" fill="#FFFFFF" cx="18.3583308" cy="18.3959744" rx="10.1990726" ry="10.2199858"></ellipse>
-                            <ellipse id="Oval-29" fill="#36516B" cx="16.3185162" cy="16.3519772" rx="4.07962906" ry="4.08799431"></ellipse>
-                        </g>
-                        <g id="Small-eye" transform="translate(25.779784, 79.846357)">
-                            <ellipse id="Oval-29" stroke="#FFFFFF" stroke-width="1.35" cx="12.8898918" cy="12.9163224" rx="12.8898918" ry="12.9163224"></ellipse>
-                            <ellipse id="Oval-29" fill="#FFFFFF" cx="12.8898918" cy="12.9163224" rx="7.161051" ry="7.17573469"></ellipse>
-                            <ellipse id="Oval-29" fill="#36516B" cx="11.4576816" cy="11.4811755" rx="2.8644204" ry="2.87029387"></ellipse>
-                        </g>
-                        <g id="Mouth" transform="translate(28.904606, 118.203920)">
-                            <path d="M10.1556723,10.1764965 C15.7644953,10.1764965 20.3113447,6.49545923 20.3113447,1.52363433 C20.3113447,-0.967092603 15.2433237,0.344599394 10.1556723,0.3494232 C5.08768945,0.354228357 0,-0.95746364 0,1.52363433 C0,6.49545923 4.54684938,10.1764965 10.1556723,10.1764965 Z" id="Oval-30" stroke="#FFFFFF" stroke-width="1.35"></path>
-                            <path d="M10.1556723,10.1764965 C12.7443599,10.1764965 15.6241113,7.73824389 15.6241113,5.47965194 C15.6241113,4.69684452 12.499289,3.9140371 10.1556723,3.9140371 C7.81205564,3.9140371 4.68723338,4.69684452 4.68723338,5.47965194 C4.68723338,7.72238936 7.56698482,10.1764965 10.1556723,10.1764965 Z" id="Oval-30" fill="#FFFFFF" transform="translate(10.155672, 7.045267) scale(1, -1) translate(-10.155672, -7.045267) "></path>
+                        <g id="Body" transform="translate(21.666667, 20.564351)">
+                            <path d="M27.7333333,50.107503 C28.1185185,39.8904358 28.3111111,33.2287447 28.3111111,30.1224295 C28.3111111,16.8334118 23.5719597,4.63421993 14.0111111,4.63421993 C4.45026249,4.63421993 0.07003367,16.8334118 0.07003367,30.1224295 C0.07003367,33.2295393 0.07003367,39.6981379 0.07003367,49.5282255 C4.61636271,51.652243 9.26338853,52.7142517 14.0111111,52.7142517 C18.7588337,52.7142517 23.3329078,51.8453355 27.7333333,50.107503 Z" id="Oval-27" stroke="#FFFFFF" stroke-width="0.5"></path>
+                            <g id="Antena-izq" transform="translate(0.288889, 0.000000)">
+                                <path d="M3.03333333,3.33084557 L6.21111111,7.38578801" id="Line-5" stroke="#FFFFFF" stroke-width="0.864" stroke-linecap="square"></path>
+                                <ellipse id="Oval-28" fill="#FFFFFF" cx="1.87777778" cy="1.88265185" rx="1.87777778" ry="1.88265185"></ellipse>
+                            </g>
+                            <g id="Antena-derecha" transform="translate(25.361289, 4.178129) rotate(3.000000) translate(-25.361289, -4.178129) translate(21.861289, 0.178129)">
+                                <path d="M0.144444444,3.62048432 L3.32222222,7.67542676" id="Line-5" stroke="#FFFFFF" stroke-width="0.864" stroke-linecap="square" transform="translate(1.733333, 5.647956) scale(-1, 1) translate(-1.733333, -5.647956) "></path>
+                                <ellipse id="Oval-28" fill="#FFFFFF" transform="translate(4.477778, 1.882652) scale(-1, 1) translate(-4.477778, -1.882652) " cx="4.47777778" cy="1.88265185" rx="1.87777778" ry="1.88265185"></ellipse>
+                            </g>
+                            <g id="Big-eye" transform="translate(7.511111, 13.033744)">
+                                <ellipse id="Oval-29" stroke="#FFFFFF" stroke-width="0.5" cx="6.78888889" cy="6.80651052" rx="6.78888889" ry="6.80651052"></ellipse>
+                                <ellipse id="Oval-29" fill="#FFFFFF" cx="6.78888889" cy="6.80651052" rx="3.77160494" ry="3.78139473"></ellipse>
+                                <ellipse id="Oval-29" fill="#36516B" cx="6.0345679" cy="6.05023157" rx="1.50864198" ry="1.51255789"></ellipse>
+                            </g>
+                            <g id="Small-eye" transform="translate(9.533333, 29.543152)">
+                                <ellipse id="Oval-29" stroke="#FFFFFF" stroke-width="0.5" cx="4.76666667" cy="4.7790393" rx="4.76666667" ry="4.7790393"></ellipse>
+                                <ellipse id="Oval-29" fill="#FFFFFF" cx="4.76666667" cy="4.7790393" rx="2.64814815" ry="2.65502183"></ellipse>
+                                <ellipse id="Oval-29" fill="#36516B" cx="4.23703704" cy="4.24803493" rx="1.05925926" ry="1.06200873"></ellipse>
+                            </g>
+                            <g id="Mouth" transform="translate(10.688889, 43.735451)">
+                                <path d="M3.75555556,3.76530369 C5.82969162,3.76530369 7.51111111,2.40331992 7.51111111,0.563744702 C7.51111111,-0.357824263 5.63696298,0.127501776 3.75555556,0.129286584 C1.88142151,0.131064492 0,-0.354261547 0,0.563744702 C0,2.40331992 1.6814195,3.76530369 3.75555556,3.76530369 Z" id="Oval-30" stroke="#FFFFFF" stroke-width="0.5"></path>
+                                <path d="M3.75555556,3.76530369 C4.71284912,3.76530369 5.77777778,2.86315024 5.77777778,2.02747122 C5.77777778,1.73783247 4.62222222,1.44819373 3.75555556,1.44819373 C2.88888889,1.44819373 1.73333333,1.73783247 1.73333333,2.02747122 C1.73333333,2.85728406 2.79826199,3.76530369 3.75555556,3.76530369 Z" id="Oval-30" fill="#FFFFFF" transform="translate(3.755556, 2.606749) scale(1, -1) translate(-3.755556, -2.606749) "></path>
+                            </g>
                         </g>
                     </g>
                 </g>

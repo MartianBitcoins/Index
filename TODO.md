@@ -36,7 +36,7 @@
 - Commit first documentation version √
 - Create and push repository to github √
 
-## V1.0.0
+## Basic Infra
 
 - Add mongo database √
   - Test database in local using docker √
@@ -67,6 +67,8 @@
     - create page comming soon and figure out how to put initial state on the app √
   - add prettier and prettier config to web-app and api √
 
+## Coming Soon Page
+
 - Add styled components √
 - Update babel, webpack, etc. √
 
@@ -75,21 +77,16 @@
 
 - Update html title √
 
-- Create server in DO, clone the repo, start the app and redirect domain to it √
+- Create server in DO, clone the repo, start the app and redirect domain to it <<<=====
+
+## Other
 
 - Set log formatters to render-server winston
-
-
-
-- Configure docker swarm in DO server
-- try to deploy it using swarn docker
-
 - lint
   - Add unused variable detection
   - Add linter with strict rules?
 
 ## Later
 
-Fix problem when hypernova server is not running there is no error!!
-
+Configure docker swarm in DO server
 Docker reference architecture - https://success.docker.com/Architecture/Docker_Reference_Architecture%3A_Development_Pipeline_Best_Practices_Using_Docker_EE

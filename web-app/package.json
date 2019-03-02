@@ -8,8 +8,8 @@
 		"build-dev": "docker build -t mbi-web-app-dev --file Dockerfile.dev .",
 		"up-dev": "docker rm mbi-web-app || true && docker container run -p 4000:4000 --name mbi-web-app --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-web-app-dev",
 		"start-dev": "docker start -ai mbi-web-app",
-		"web-start-dev": "npm run compile-app-for-server -- --verbose && npm run start-render-server-dev & npm run compile-app-for-server -- -watch --verbose",
-		"start-render-server-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) pm2 start ./render-server/server.js --watch --merge-logs",
+		"web-start-dev": "npm run compile-app-for-server -- --verbose && (npm run compile-app-for-server -- -watch --verbose & npm run start-render-server-dev)",
+		"start-render-server-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/server.js",
 		"compile-app-for-server": "npx babel ./app --out-dir ./app-build --config-file=./.babelrc.server"
 	},
 	"author": "",
@@ -38,6 +38,7 @@
 		"babel-plugin-styled-components": "^1.8.0",
 		"cerebral": "^5.0.3",
 		"koa-webpack-dev-middleware": "^2.0.2",
+		"nodemon": "^1.18.10",
 		"prettier": "^1.15.2",
 		"react": "^16.6.3",
 		"react-dom": "^16.6.3",

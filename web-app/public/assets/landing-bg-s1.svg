@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="937px" viewBox="0 0 1440 937" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>business-code-coding-943096</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="47.4608097%" y1="86.9385985%" x2="47.4608097%" y2="16.1023686%" id="linearGradient-1">
+            <stop stop-color="#374E69" offset="0%"></stop>
+            <stop stop-color="#247F8F" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1440" height="937"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LAnding-page-Copy-8-*-Copy">
+            <g id="Hero-image">
+                <g id="business-code-coding-943096">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="background-copy" opacity="0.283984375" style="mix-blend-mode: overlay;" mask="url(#mask-3)">
+                        <g transform="translate(-318.000000, -538.000000)">
+                            <polygon id="Triangle-3" stroke="none" fill="#777777" points="476 867.5 2248 378 2248 1357 1706.87939 1291.03223"></polygon>
+                            <polygon id="Triangle-3-Copy" stroke="#D8D8D8" stroke-width="3.84" fill="#BFBFBF" transform="translate(1393.615847, 1440.609628) rotate(32.000000) translate(-1393.615847, -1440.609628) " points="319.121485 1440.21363 2468.11021 950.561727 2468.10536 1930.65753"></polygon>
+                            <polygon id="Triangle-4" stroke="#BBBBBB" stroke-width="5.76" fill="#B4B4B4" points="436.538944 835 1086 1475 0 1475"></polygon>
+                            <polygon id="Triangle-5" stroke="#979797" stroke-width="1.92" fill="#C6C6C6" points="476 869.75 307.518657 1115 215 1060.5 215 679"></polygon>
+                            <path d="M395.457445,434.593109 C555.233479,528.53994 655.335374,613.410262 695.763131,689.204077 C736.190887,764.997891 713.06784,824.447238 626.393987,867.552116 L164.520571,867.552293 L395.457445,434.593109 Z" id="Triangle-6" stroke="#979797" stroke-width="1.92" fill="#B1B1B1" transform="translate(439.786124, 651.072701) rotate(182.000000) translate(-439.786124, -651.072701) "></path>
+                            <polygon id="Triangle" stroke="#979797" stroke-width="0.96" fill="#9B9B9B" transform="translate(1022.423430, 601.439015) rotate(236.000000) translate(-1022.423430, -601.439015) " points="1108.55067 -0.526671495 1300.34205 384.214289 1341.77485 969.162751 875.316574 969.165134 703.072011 1203.4047"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

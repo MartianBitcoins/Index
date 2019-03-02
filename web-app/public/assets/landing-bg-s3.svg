@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="280px" viewBox="0 0 1440 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>blockchain rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="280"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LAnding-page-Copy-8-*-Copy" transform="translate(0.000000, -1732.000000)">
+            <g id="blockchain-rectangle" transform="translate(0.000000, 1732.000000)">
+                <g id="background-copy-2">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#374E69" xlink:href="#path-1"></use>
+                    <g opacity="0.283984375" style="mix-blend-mode: overlay;" mask="url(#mask-2)">
+                        <g transform="translate(-203.000000, -559.000000)">
+                            <polygon id="Triangle-3" stroke="none" fill="#777777" points="324 646.5 1632 279 1632 1014 1232.57237 964.473633"></polygon>
+                            <polygon id="Triangle-3-Copy" stroke="#D8D8D8" stroke-width="3.2" fill="#BFBFBF" transform="translate(993.500000, 1067.500000) rotate(32.000000) translate(-993.500000, -1067.500000) " points="201 1067.19505 1786 700 1786 1435"></polygon>
+                            <polygon id="Triangle-4" stroke="#BBBBBB" stroke-width="4.8" fill="#B4B4B4" points="322.379588 646 802 1125 0 1125"></polygon>
+                            <polygon id="Triangle-5" stroke="#979797" stroke-width="1.6" fill="#C6C6C6" points="323 648.5 199.059701 833 131 792 131 505"></polygon>
+                            <path d="M265.308834,325 C383.13885,395.738061 456.960993,459.641876 486.775262,516.711444 C516.58953,573.781012 499.536999,618.543864 435.617668,651 L95,651 L265.308834,325 Z" id="Triangle-6" stroke="#979797" stroke-width="1.6" fill="#B1B1B1" transform="translate(298.000000, 488.000000) rotate(182.000000) translate(-298.000000, -488.000000) "></path>
+                            <polygon id="Triangle" stroke="#979797" stroke-width="0.8" fill="#9B9B9B" transform="translate(734.500000, 448.500000) rotate(236.000000) translate(-734.500000, -448.500000) " points="798.009016 -3 939.443864 285.5734 970 724.310668 626.018032 724.310668 499 900"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,7 +1,7 @@
-import ComingSoon from './ComingSoon'
+import Landing from './Landing'
 import Health from './Health'
 
 export default {
-  ComingSoon,
+  Landing,
   Health,
 }

@@ -13,31 +13,39 @@ module.exports = async function render(ctx) {
   // TODO: Validate state and implement new state
   const newState = ctx.request.body.state
 
-  // TODO: try/catch
-  const main = mainFactory({ newState })
-  const app = UniversalApp(main)
-  const sheet = new ServerStyleSheet()
-  const appHtml = renderToString(
-    sheet.collectStyles(
-      React.createElement(
-        Container,
-        { app: app },
-        React.createElement(AppComponent, null)
+  let htmlText
+  try {
+    const main = mainFactory({ newState })
+    const app = UniversalApp(main)
+    const sheet = new ServerStyleSheet()
+    const appHtml = renderToString(
+      sheet.collectStyles(
+        React.createElement(
+          Container,
+          { app: app },
+          React.createElement(AppComponent, null)
+        )
       )
     )
-  )
-  const styleTags = sheet.getStyleTags()
-  logger.debug('[render.js] styleTags:', styleTags)
+    const styleTags = sheet.getStyleTags()
+    logger.debug('[render.js] styleTags:', styleTags)
 
-  logger.debug('[render.js] reactHMTL:', appHtml)
-  logger.debug('[render.js] state:', main.state)
+    logger.debug('[render.js] reactHMTL:', appHtml)
+    logger.debug('[render.js] state:', main.state)
 
-  const htmlText = htmlTemplate({
-    production: !config.isDeveloping,
-    body: appHtml,
-    state: main.state,
-    styleTags,
-  })
+    htmlText = htmlTemplate({
+      production: !config.isDeveloping,
+      body: appHtml,
+      state: main.state,
+      styleTags,
+    })
+  } catch (err) {
+    console.error('Error rendering app:')
+    console.error(err)
+    ctx.status = 500
+    ctx.body = { error: 'Internal Server Error' }
+    return
+  }
 
-  ctx.response.body = { html: htmlText }
+  ctx.body = { html: htmlText }
 }

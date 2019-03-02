@@ -8,6 +8,7 @@ module.exports = ({ production, body, state, styleTags }) => `
     <title>Martian Bitcoins</title>
     <meta name="description" content="Martian Bitcoins Index">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
   <body>
     ${styleTags}
