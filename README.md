@@ -55,18 +55,25 @@ Create API Container
 
 ```sh
 npm run build-dev
-npm run up-dev
+
 ```
 
 Start API Container
 
 ```sh
-
+npm run up-dev
 ```
 
-Web app
+### Web app
+
+Build Web App
 
 ```sh
 npm run build-dev
+```
+
+Start Web App
+
+```sh
 npm run up-dev
 ```

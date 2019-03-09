@@ -3,13 +3,15 @@ const React = require('react')
 const { Container } = require('@cerebral/react')
 const { renderToString } = require('react-dom/server')
 const { ServerStyleSheet } = require('styled-components')
-const { factory: mainFactory } = require('../app-build/main')
-const { default: AppComponent } = require('../app-build/components/App/index')
 const logger = require('./lib/logger')
 const htmlTemplate = require('./html')
 const config = require('../config')
 
 module.exports = async function render(ctx) {
+  // TODO: Cache on Prod
+  const { factory: mainFactory } = require('../app-build/main')
+  const { default: AppComponent } = require('../app-build/components/App/index')
+
   // TODO: Validate state and implement new state
   const newState = ctx.request.body.state
 
