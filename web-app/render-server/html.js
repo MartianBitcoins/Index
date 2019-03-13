@@ -1,5 +1,5 @@
 
-module.exports = ({ production, body, state, styleTags }) => `
+module.exports = ({ production, body, state, styleTags, omitJs }) => `
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +16,7 @@ module.exports = ({ production, body, state, styleTags }) => `
       window.mbiState = JSON.parse('${JSON.stringify(state)}')
     </script>
     <div id="app">${body}</div>
-    <script src="/client_bundle.js"></script>
+    ${omitJs ? '' : '<script src="/client_bundle.js"></script>'}
   </body>
 </html>
 `

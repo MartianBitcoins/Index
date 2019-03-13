@@ -1,3 +1,4 @@
+const fs = require('fs')
 const { UniversalApp } = require('cerebral')
 const React = require('react')
 const { Container } = require('@cerebral/react')
@@ -7,11 +8,23 @@ const logger = require('./lib/logger')
 const htmlTemplate = require('./html')
 const config = require('../config')
 
-module.exports = async function render(ctx) {
-  // TODO: Cache on Prod
-  const { factory: mainFactory } = require('../app-build/main')
-  const { default: AppComponent } = require('../app-build/components/App/index')
+let mainFactory
+let AppComponent
+let compiling = false
+try {
+  fs.statSync('../app-build/main')
+  fs.statSync('../app-build/components/App/index')
+  mainFactory = require('../app-build/main').factory
+  AppComponent = require('../app-build/components/App/index').default
+} catch (err) {
+  logger.warn('No components, waiting for restart...')
+  mainFactory = () => ({ state: {} })
+  AppComponent = () =>
+    React.createElement('div', null, 'COMPILING COMPONENTS PLS RELOAD...')
+  compiling = true
+}
 
+module.exports = async function render(ctx) {
   // TODO: Validate state and implement new state
   const newState = ctx.request.body.state
 
@@ -40,6 +53,7 @@ module.exports = async function render(ctx) {
       body: appHtml,
       state: main.state,
       styleTags,
+      omitJs: compiling,
     })
   } catch (err) {
     console.error('Error rendering app:')

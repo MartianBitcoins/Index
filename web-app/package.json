@@ -9,7 +9,7 @@
 		"up-dev": "docker rm mbi-web-app || true && docker container run -p 4000:4000 --name mbi-web-app --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-web-app-dev",
 		"start-dev": "docker start -ai mbi-web-app",
 		"web-start-dev": "(npm run compile-app-for-server -- -watch --verbose & npm run start-render-server-dev)",
-		"start-render-server-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) node ./render-server/server.js",
+		"start-render-server-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon ./render-server/server.js",
 		"compile-app-for-server": "npx babel ./app --out-dir ./app-build --config-file=./.babelrc.server"
 	},
 	"author": "",

@@ -51,7 +51,7 @@ export default function Landing() {
             </Menu>
           </Header>
           <InnerSOne>
-            <ISOneText1>Building the Blockchain Revolution</ISOneText1>
+            <ISOneText1>Building--- the Blockchain Revolution</ISOneText1>
             <ISOneText2>Descentralized Investment Done Right</ISOneText2>
             <ISOneSubmit><span>Submit Your Project</span></ISOneSubmit>
           </InnerSOne>

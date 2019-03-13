@@ -12,6 +12,8 @@ export const SectionOne = styled.div`
   height: 937px;
   width: 100%;
   background-image: url("public/assets/landing-bg-s1.svg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 `
 
 export const Header = styled.div`
@@ -51,6 +53,8 @@ export const ISOneText1 = styled.div`
   text-transform: uppercase;
   font-size: 60px;
   font-family: 'Raleway', sans-serif;
+  max-width: 793px;
+  /* margin: 0 auto; */
 `
 
 export const ISOneText2 = styled.div`
@@ -60,7 +64,6 @@ export const ISOneText2 = styled.div`
   font-size: 15px;
   font-family: 'Raleway', sans-serif;
 `
-
 
 export const ISOneSubmit = styled.div`
   margin: 0 auto;
