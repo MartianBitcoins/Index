@@ -12,12 +12,13 @@ let mainFactory
 let AppComponent
 let compiling = false
 try {
-  fs.statSync('../app-build/main')
-  fs.statSync('../app-build/components/App/index')
+  fs.statSync(__dirname + '/../app-build/main/index.js')
+  fs.statSync(__dirname + '/../app-build/components/App/index.js')
   mainFactory = require('../app-build/main').factory
   AppComponent = require('../app-build/components/App/index').default
 } catch (err) {
   logger.warn('No components, waiting for restart...')
+  console.error(err)
   mainFactory = () => ({ state: {} })
   AppComponent = () =>
     React.createElement('div', null, 'COMPILING COMPONENTS PLS RELOAD...')
