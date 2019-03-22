@@ -6,6 +6,7 @@ require('./lib/mongoose')
 const pingRoutes = require('./routes/api/ping')
 const homeRoute = require('./routes/home')
 const healthRoute = require('./routes/health')
+const coinsRoute = require('./routes/coins')
 
 const { api: { port: apiPort }, render: { host: renderHost, port: renderPort }} = require('./config')
 const internalErrorMiddleware = require('./middleware/internal-error')
@@ -24,6 +25,7 @@ router.post('/api/ping', pingRoutes.ping)
 // Web APP routes
 router.get('/', homeRoute)
 router.get('/health', healthRoute)
+router.get('/coins', coinsRoute)
 
 // Static files
 // Redirect the rest of the GET calls to the render server (serve static files)

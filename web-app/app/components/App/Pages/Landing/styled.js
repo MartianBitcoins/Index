@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
+
 `
 
 export const Content = styled.div`
@@ -36,6 +37,7 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   margin-right: 40px;
+  cursor: pointer;
   div {
     color: #FFFFFF;
     margin-right: 40px;

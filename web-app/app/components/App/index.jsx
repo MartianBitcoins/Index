@@ -5,18 +5,20 @@ import pages from './Pages'
 import GlobalReset from './GlobalReset'
 import { App as AppWrapper } from './styled'
 
-export default connect({
-  currentPage: state.currentPage,
-}, function App({ currentPage }) {
+export default connect( { currentPage: state.currentPage }, 
+  function App({ currentPage }) {
 
-  let Page = pages[currentPage]
+    let Page = pages[currentPage]
 
-  if (!Page) {
-    // TODO: Redirect to error page
-    throw new Error(`Page ${currentPage} does not exists`)
-  }
+    console.log('CURRENT PAGE ', currentPage)
+    console.log(pages, '############ ', Page)
 
-  console.log('[App Component] render()')
+    if (!Page) {
+      // TODO: Redirect to error page
+      throw new Error(`Page ${currentPage} does not exists`)
+    }
+
+    console.log('[App Component] render()', currentPage)
   return (
     <AppWrapper>
       <Page/>
