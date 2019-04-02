@@ -7,6 +7,7 @@ const pingRoutes = require('./routes/api/ping')
 const homeRoute = require('./routes/home')
 const healthRoute = require('./routes/health')
 const coinsRoute = require('./routes/coins')
+const coinsDetailsRoute = require('./routes/coins/details')
 
 const { api: { port: apiPort }, render: { host: renderHost, port: renderPort }} = require('./config')
 const internalErrorMiddleware = require('./middleware/internal-error')
@@ -26,6 +27,7 @@ router.post('/api/ping', pingRoutes.ping)
 router.get('/', homeRoute)
 router.get('/health', healthRoute)
 router.get('/coins', coinsRoute)
+router.get('/coins/:id', coinsDetailsRoute)
 
 // Static files
 // Redirect the rest of the GET calls to the render server (serve static files)

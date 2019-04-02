@@ -12,10 +12,10 @@ import {WrapperText, Img, BoxInfo, WrapperLine} from './style'
 import GeneralIndex from  './GeneralIndex.js'
 
 
-export default function Coins() {
+export default function CoinsDetails() {
         return (
             <div>
-                <Header/>
+                <Header />
                 <div className="total-center">
                     <WrapperText>
                         <TitleGeneral marginBottom="20px">Gourmet Red</TitleGeneral>
@@ -26,7 +26,7 @@ export default function Coins() {
                 </div>
                 <div className="total-center">
                     <TwoColumnWrap marginTop="40px" marginBottom="50px">
-                        <Img src="public/assets/images/img-1.jpg" alt="imagenes" />   
+                        <Img src= "../public/assets/images/img-1.jpg" alt="imagenes" />   
                         <div>
                             <div className="total-center">
                                 <Divider width="95%"/>
@@ -80,5 +80,3 @@ export default function Coins() {
             </div>
         )
     }
-
-//export default HomeList;

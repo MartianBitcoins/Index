@@ -10,7 +10,7 @@ import TopPicks from '../TopPicks/Index'
 import GeneralIndex from './GeneralIndex'
 
 
-const Browser = (props) => (
+const Coins = (props) => (
         <Layout  history={props.history}>
           <GridContainer>
               <BrowserHeader>
@@ -52,7 +52,7 @@ const Browser = (props) => (
         </Layout>
     )
 
-export default Browser;
+export default Coins;
 
 const GridContainer =styled.div`
   display: grid;

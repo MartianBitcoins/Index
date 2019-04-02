@@ -7,7 +7,7 @@ import TitleGeneral from '../Generic/TitleGeneral';
 import Description from '../Generic/Description';
 
 const Targets = (props) => (
-      <DesignTargets onClick={() => props.history.push('/detail')} className="opacity">
+      <DesignTargets href="coins/12332423434" className="opacity">
         < Img src = "public/assets/images/pumpkin.jpg"
         alt = "imagenes" />
         <FixTargets2>
@@ -74,9 +74,10 @@ const FixTargets2 = styled.div`
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
     padding-bottom: 20px;
 `
-const DesignTargets = styled.div`
+const DesignTargets = styled.a`
     width:100%;
     max-width: 350px;
-    min-height:320px;
-    background:white;
+    min-height: 320px;
+    background: #FFFFFF;
+    text-decoration: none;
 `

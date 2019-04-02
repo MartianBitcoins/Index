@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'styled-components';
-import Divider from '../Generic/Divider';
-import TitleGeneral from '../Generic/TitleGeneral';
-import Description from '../Generic/Description';
-import { FaFacebook, FaMedium, FaMediumM, FaBitcoin, FaEthereum, FaTwitter, FaYoutube } from 'react-icons/fa';
+import styled from 'styled-components'
+import Divider from '../Generic/Divider'
+import TitleGeneral from '../Generic/TitleGeneral'
+import Description from '../Generic/Description'
+import { FaFacebook, FaMedium, FaMediumM, FaBitcoin, FaEthereum, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 
 const Footer = () => (
@@ -11,7 +11,7 @@ const Footer = () => (
     <div>
         <div className="total-center">
             <HeadFooter>
-                <Logo src="public/assets/images/logo-white.png" alt="logo" />
+                <Logo src='public/assets/images/logo-whie.png' alt="logo" />
                 <BoxNetwork>
                     <FaFacebook color="#FFF" size="30"/>
                     <FaMediumM color="#FFF" size="30"/>
