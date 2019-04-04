@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "env $(cat env/.dev.env | grep -v ^# | xargs) nodemon server.js",
-    "up-dev": "docker container run -p 3000:3000 --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-api-dev",
+    "up-dev": "docker container run -p 3000:3000 --name mbi-api-server --network=mbi-network -ti --mount type=bind,source=\"$(pwd)\",target=/usr/app/src mbi-api-dev",
     "build-dev": "docker build -t mbi-api-dev --file Dockerfile.dev ."
   },
   "author": "",
