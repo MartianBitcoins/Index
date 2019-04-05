@@ -7,34 +7,16 @@ import { App as AppWrapper } from './styled'
 
 import { sequences } from 'cerebral'
 
-
-// import Landing  from './Pages/Landing'
-// import Health from './Pages/Health'
-// import Coins from './Pages/Coins'
-// import CoinsDetails from './Pages/Coins/CoinsDetails'
-
-// const pages = {
-//   home: Landing,
-//   health: Health,
-//   coins: Coins,
-//   coinscoinsdetails: CoinsDetails
-// }
-export default connect( { currentPage: state.currentPage }, 
+export default connect({ currentPage: state.currentPage },
   function App({ currentPage }) {
-   let Page = pages[currentPage]
-    console.log('CURRENT PAGE ', currentPage)
-    console.log(pages, '############ ', Page)
-
-    if (!Page) {
-      // TODO: Redirect to error page
+    let Page = pages[currentPage]
+    if(!Page)
       throw new Error(`Page ${currentPage} does not exists`)
-    }
 
-    console.log('[App Component] render()', currentPage)
-  return (
-    <AppWrapper>
-      <Page/>
-      <GlobalReset/>
-    </AppWrapper>
-  )
-}) 
+    return (
+      <AppWrapper>
+        <Page/>
+        <GlobalReset/>
+      </AppWrapper>
+    )
+  })

@@ -13,5 +13,5 @@ export default function AccountPage() {
         <AccountDeletePage />
       </div>
     </div>
-  );
+  )
 }

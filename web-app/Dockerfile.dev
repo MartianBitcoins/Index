@@ -15,7 +15,7 @@ COPY package.json .
 COPY package-lock.json .
 
 # Install and Cache npm packages
-RUN npm install
+# RUN npm install
 
 # Expose the port the app runs in
 EXPOSE 4000
