@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   text-align: center;
-  height: 1440px;
-  position: relative;
+  height: 300px;
+  position: inherit;
   background: #374E69;
 `
 

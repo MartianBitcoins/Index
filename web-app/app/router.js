@@ -1,7 +1,6 @@
 import Router from 'cerebral-module-router';
 
 export default new Router({
-  '/': 'gallery.setHomePage',
 
   '/login': 'auth.loginClicked',
   '/signup': 'auth.signupClicked',

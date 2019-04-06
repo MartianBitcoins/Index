@@ -48,6 +48,8 @@ export default function Landing() {
               <div>How we work</div>
               <div>Blog</div>
               <div>One pager</div>
+              <div><a href='/coins' >Coins list</a></div>
+              
             </Menu>
           </Header>
           <InnerSOne>

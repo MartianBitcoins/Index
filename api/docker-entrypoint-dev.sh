@@ -1,2 +1,3 @@
 #! /bin/bash
-npm install && npm run start-dev
+# npm install && 
+npm run start-dev
