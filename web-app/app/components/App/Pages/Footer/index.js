@@ -5,62 +5,70 @@ import TitleGeneral from '../Generic/TitleGeneral'
 import Description from '../Generic/Description'
 import { FaFacebook, FaMedium, FaMediumM, FaBitcoin, FaEthereum, FaTwitter, FaYoutube } from 'react-icons/fa'
 
+import { state } from 'cerebral'
+import { connect } from '@cerebral/react'
 
-const Footer = () => (
-  <Container>
-    <div>
+export default connect({
+  CurrentPage: state.currentPage
+}, function Footer({CurrentPage}) {
+  console.log(CurrentPage, '##########')
+  let logo = (CurrentPage == 'Coins') ? 'public/assets/images/logo-white.png' : '../public/assets/images/logo-white.png'
+  return (
+    <Container>
+      <div>
         <div className="total-center">
-            <HeadFooter>
-                <Logo src='public/assets/images/logo-whie.png' alt="logo" />
-                <BoxNetwork>
-                    <FaFacebook color="#FFF" size="30"/>
-                    <FaMediumM color="#FFF" size="30"/>
-                    <FaBitcoin color="#FFF" size="30"/>
-                    <FaEthereum color="#FFF" size="30"/>
-                    <FaTwitter color="#FFF" size="30"/>
-                    <FaYoutube color="#FFF" size="30"/>
-                </BoxNetwork>
-            </HeadFooter>
+          <HeadFooter>
+            <Logo src={logo} alt="logo" />
+            <BoxNetwork>
+              <FaFacebook color="#FFF" size="30"/>
+              <FaMediumM color="#FFF" size="30"/>
+              <FaBitcoin color="#FFF" size="30"/>
+              <FaEthereum color="#FFF" size="30"/>
+              <FaTwitter color="#FFF" size="30"/>
+              <FaYoutube color="#FFF" size="30"/>
+            </BoxNetwork>
+          </HeadFooter>
         </div>
         <div className="total-center">
-                <Divider 
-                    color="#FFF" 
-                    width="90%" 
-                />
+          <Divider
+            color="#FFF"
+            width="90%"
+          />
         </div>
-    </div>
-    <div className="total-center">
+      </div>
+      <div className="total-center">
         <WrapperInfo>
-            <div>
-                <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Resources</TitleGeneral>
-                <Description color="#FFF" marginBottom="5px">Documents</Description>
-                <Description color="#FFF" marginBottom="5px">Proyect submissions</Description>
-                <Description color="#FFF" marginBottom="5px">Website terms of use</Description>
-                <Description color="#FFF" marginBottom="5px">ICO terms and conditions</Description>
-                <Description color="#FFF" marginBottom="5px">Privacy notice</Description>
-            </div>
-            <div>
-                <TitleGeneral fontSize="18px"  marginBottom="10px" color="#FFF">Navigation</TitleGeneral>
-                <Description color="#FFF" marginBottom="5px">Media</Description>
-                <Description color="#FFF" marginBottom="5px">Blog</Description>
-            </div>
-            <div>
-                <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Cozumel, Mx</TitleGeneral>
-                <Description color="#FFF" marginBottom="5px">Costera 138, Cozunel</Description>
-                <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF" marginTop="20">Hu hang, Thailand</TitleGeneral>
-                <Description color="#FFF" marginBottom="5px">Shang hai 13823, Thailand</Description>
-            </div>
-            <div>
-                <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Contact us</TitleGeneral>
-                <Description color="#FFF" marginBottom="5px">Support@MBC.com</Description>
-                <Description color="#FFF" marginBottom="5px">For marketing inquiries, please contact: marketing@MBC.com</Description>
-            </div>
+          <div>
+            <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Resources</TitleGeneral>
+            <Description color="#FFF" marginBottom="5px">Documents</Description>
+            <Description color="#FFF" marginBottom="5px">Proyect submissions</Description>
+            <Description color="#FFF" marginBottom="5px">Website terms of use</Description>
+            <Description color="#FFF" marginBottom="5px">ICO terms and conditions</Description>
+            <Description color="#FFF" marginBottom="5px">Privacy notice</Description>
+          </div>
+          <div>
+            <TitleGeneral fontSize="18px"  marginBottom="10px" color="#FFF">Navigation</TitleGeneral>
+            <Description color="#FFF" marginBottom="5px">Media</Description>
+            <Description color="#FFF" marginBottom="5px">Blog</Description>
+          </div>
+          <div>
+            <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Cozumel, Mx</TitleGeneral>
+            <Description color="#FFF" marginBottom="5px">Costera 138, Cozunel</Description>
+            <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF" marginTop="20">Hu hang, Thailand</TitleGeneral>
+            <Description color="#FFF" marginBottom="5px">Shang hai 13823, Thailand</Description>
+          </div>
+          <div>
+            <TitleGeneral fontSize="18px" marginBottom="10px" color="#FFF">Contact us</TitleGeneral>
+            <Description color="#FFF" marginBottom="5px">Support@MBC.com</Description>
+            <Description color="#FFF" marginBottom="5px">For marketing inquiries, please contact: marketing@MBC.com</Description>
+          </div>
         </WrapperInfo>
-    </div>
-    <div>
+      </div>
+      <div>
         <Description color="#FFF" textAlign="center" fontSize="14px">2018 Martian Bitcoins Collective Ltd</Description>
-    </div>
-  </Container>
+      </div>
+    </Container>
+  )}
 )
 const Container = styled.div`
     width: 100%;
@@ -124,6 +132,3 @@ const WrapperInfo = styled.div`
         grid-row-gap: 30px;
     }
 `
-
-
-export default Footer;
