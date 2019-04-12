@@ -8,6 +8,7 @@ class SidebarContent extends Component {
     changeToDark: PropTypes.func.isRequired,
     changeToLight: PropTypes.func.isRequired,
     onClick: PropTypes.func.isRequired,
+    // loadCoinsList: PropTypes.func.isRequired,
   };
 
   hideSidebar = () => {
@@ -34,6 +35,13 @@ class SidebarContent extends Component {
           <SidebarCategory title="Example Pages" icon="diamond">
             <SidebarLink title="Page one" route="/pages/one" onClick={this.hideSidebar} />
             <SidebarLink title="Page two" route="/pages/two" onClick={this.hideSidebar} />
+            <SidebarLink title="Page three" route="/pages/coins" onClick={this.hideSidebar} />
+          </SidebarCategory>
+        </ul>
+        <ul className="sidebar__block">
+          <SidebarCategory title="Coins" icon="diamond">
+            <SidebarLink title="Coin page" route="/coins/home" />
+            <SidebarLink title="Create Coin" route="/coins/createcoin" />
           </SidebarCategory>
         </ul>
       </div>

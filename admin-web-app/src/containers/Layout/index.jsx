@@ -8,12 +8,18 @@ import Sidebar from './sidebar/Sidebar';
 
 import { changeThemeToDark, changeThemeToLight } from '../../redux/actions/themeActions';
 import { changeMobileSidebarVisibility, changeSidebarVisibility } from '../../redux/actions/sidebarActions';
+import { loadCoinsList } from '../../redux/actions/coinsAtions';
 import { SidebarProps } from '../../shared/prop-types/ReducerProps';
 
 class Layout extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     sidebar: SidebarProps.isRequired,
+  };
+
+  loadCoins = () => {
+    const { dispatch } = this.props;
+    dispatch(loadCoinsList());
   };
 
   changeSidebarVisibility = () => {
@@ -55,6 +61,7 @@ class Layout extends Component {
           changeToDark={this.changeToDark}
           changeToLight={this.changeToLight}
           changeMobileSidebarVisibility={this.changeMobileSidebarVisibility}
+          loadCoinsList={this.loadCoins}
         />
       </div>
     );

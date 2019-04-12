@@ -6,8 +6,8 @@ const ExampleCard = () => (
     <Card>
       <CardBody>
         <div className="card__title">
-          <h5 className="bold-text">Example title</h5>
-          <h5 className="subhead">Example COINS</h5>
+          <h5 className="bold-text">Example Three</h5>
+          <h5 className="subhead">Example 333333</h5>
         </div>
         <p>Your content here</p>
       </CardBody>

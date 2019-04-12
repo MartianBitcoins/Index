@@ -6,14 +6,14 @@ import SidebarContent from './SidebarContent';
 import { SidebarProps } from '../../../shared/prop-types/ReducerProps';
 
 const Sidebar = ({
-  changeToDark, changeToLight, changeMobileSidebarVisibility, sidebar,
+  loadCoinsList, changeToDark, changeToLight, changeMobileSidebarVisibility, sidebar,
 }) => {
   const sidebarClass = classNames({
     sidebar: true,
     'sidebar--show': sidebar.show,
     'sidebar--collapse': sidebar.collapse,
   });
-
+  // console.log(loadCoins, 'ESTE DEBE TENER LA FUNC');
   return (
     <div className={sidebarClass}>
       <button type="button" className="sidebar__back" onClick={changeMobileSidebarVisibility} />
@@ -30,6 +30,7 @@ const Sidebar = ({
             onClick={changeMobileSidebarVisibility}
             changeToDark={changeToDark}
             changeToLight={changeToLight}
+            loadCoinsList={loadCoinsList}
           />
         </div>
       </Scrollbar>
@@ -42,6 +43,7 @@ Sidebar.propTypes = {
   changeToDark: PropTypes.func.isRequired,
   changeToLight: PropTypes.func.isRequired,
   changeMobileSidebarVisibility: PropTypes.func.isRequired,
+  loadCoinsList: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
