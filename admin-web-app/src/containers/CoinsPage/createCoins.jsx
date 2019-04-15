@@ -7,7 +7,7 @@ import {
 
 import GerneralInfo from './components/forms/coinsGeneralInfo';
 import CoinsDetailsInfo from './components/forms/coinsDetailsInfo';
-
+import validate from './components/forms/validate';
 
 // import showResults from './Show';
 import { createCoins } from '../../redux/actions/coinsAtions';
@@ -20,12 +20,14 @@ class CreateCoin extends Component {
 
   sendindData = () => {
     console.log(this.props, ' PROPPPPPPPPPS');
-    // eslint-disable-next-line react/prop-types
-    const { frm } = this.props;
-    console.log(frm.values, 'Antes de enciar');
-    createCoins(frm.values, (r) => {
-      console.log(r);
-    });
+    if (undefined !== this.props) {
+      // eslint-disable-next-line react/prop-types
+      const { frm } = this.props;
+      console.log(frm.values, 'Antes de enciar');
+      createCoins(frm.values, (r) => {
+        console.log(r);
+      });
+    }
   }
 
   render() {
@@ -66,4 +68,4 @@ const mapDispatchToProps = dispatch => (
     },
   }
 );
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'create_coin' })(CreateCoin));
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'create_coin', validate })(CreateCoin));

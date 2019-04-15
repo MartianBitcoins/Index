@@ -28,8 +28,8 @@ const CoinsList = ({ listado }) => (
                 <th scope="row">{list.id}</th>
                 <td>{list.name}</td>
                 <td>{list.rating}</td>
-                <td>{list.details.price}</td>
-                <td>{list.details.pre_ico_price}</td>
+                <td>{ (undefined === list.details) ? '' : list.details.price }</td>
+                <td>{ (undefined === list.details) ? '' : list.details.pre_ico_price }</td>
                 <td>{list.mvp}</td>
               </tr>
             ))

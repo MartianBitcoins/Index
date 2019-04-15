@@ -5,6 +5,7 @@ const BASE_URL = 'http://localhost:3000';
 const API = axios.create({
   baseURL: BASE_URL,
   timeout: 30000000,
+  // headers: { 'Content-Type': 'multipart/form-data' },
 });
 
 API.interceptors.request.use(

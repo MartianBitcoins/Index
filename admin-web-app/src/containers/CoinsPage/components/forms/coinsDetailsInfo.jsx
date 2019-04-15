@@ -11,56 +11,78 @@ const CoinsDetailsInfo = () => (
           <h5 className="bold-text">Detail coin info</h5>
         </div>
         <FieldsForm
-          name="details_bonus"
+          name="details['token']"
+          label="Token"
+          component="input"
+          type="text"
+          placeholder="Coin token"
+        />
+        <FieldsForm
+          name="details['pre_ico_price']"
+          label="Pre-ico Price"
+          component="input"
+          type="text"
+          placeholder="Pre-ico Price"
+        />
+        <FieldsForm
+          name="details['price']"
+          label="Coins Price"
+          component="input"
+          type="text"
+          placeholder="Coins Price"
+        />
+
+        <FieldsForm
+          name="details['bonus']"
           label="Coins bonus"
           component="input"
           type="text"
           placeholder="Coins bonus"
         />
         <FieldsForm
-          name="details_bounty"
+          name="details['bounty']"
           label="Coins bounty"
           component="input"
           type="text"
           placeholder="Coins bounty"
         />
         <FieldsForm
-          name="details_mvp"
+          name="details['mvp']"
           label="Coins mvp"
           component="input"
           type="text"
           placeholder="Coins mvp"
         />
         <FieldsForm
-          name="details_platfrom"
+          name="details['platfrom']"
           label="Coins platfrom"
           component="input"
           type="text"
           placeholder="Coins platfrom"
         />
         <FieldsForm
-          name="details_accepting"
+          name="details['accepting']"
           label="Coins accepting"
           component="input"
           type="text"
           placeholder="Coins accepting"
         />
         <FieldsForm
-          name="details_minimum_investment"
+          name="details['minimum_investment']"
           label="Coins minimum investment"
           component="input"
           type="text"
           placeholder="Coins minimum investment"
         />
         <FieldsForm
-          name="details_soft_cap"
+          name="details['soft_cap']"
           label="Coins soft cap"
           component="input"
           type="text"
           placeholder="Coins soft cap"
         />
         <FieldsForm
-          name="details_hard_cap"
+          name="details['hard_cap']"
           label="Coins hard cap"
           component="input"
           type="text"

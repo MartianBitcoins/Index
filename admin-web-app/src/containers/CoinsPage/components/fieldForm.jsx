@@ -1,21 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form';
+import renderDropZoneMultipleField from './DropZoneMultiple';
 
 // eslint-disable-next-line react/prop-types
 const FieldsForm = ({
   // eslint-disable-next-line react/prop-types
-  name, label, type, placeholder, component,
+  name, label, type, placeholder, component, isFile = false,
 }) => (
   <div className="form__form-group">
     <span className="form__form-group-label">{label}</span>
     <div className="form__form-group-field">
-      <Field
-        name={name}
-        component={component}
-        type={type}
-        placeholder={placeholder}
-      />
+      { !isFile
+        ? (
+          <Field
+            name={name}
+            component={component}
+            type={type}
+            placeholder={placeholder}
+          />
+        )
+        : (
+          <Field
+            name={name}
+            component={renderDropZoneMultipleField}
+            type={type}
+            placeholder={placeholder}
+          />
+        )
+      }
     </div>
   </div>
 );

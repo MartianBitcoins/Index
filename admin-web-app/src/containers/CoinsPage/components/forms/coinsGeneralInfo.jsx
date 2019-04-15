@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Card, CardBody } from 'reactstrap';
 import FieldsForm from '../fieldForm';
 
+const required = value => (value || typeof value === 'number' ? undefined : 'Required');
 const GerneralInfo = () => (
 
   <Col md={6}>
@@ -11,13 +12,28 @@ const GerneralInfo = () => (
           <h5 className="bold-text">Coin info</h5>
           <h5 className="subhead">Coin general informations</h5>
         </div>
-        <FieldsForm name="name" label="Name" type="text" component="input" placeholder="Coin name" />
+        <FieldsForm
+          name="name"
+          label="Name"
+          type="text"
+          component="input"
+          placeholder="Coin name"
+        />
         <FieldsForm
           name="descriptions"
           label="Descriptions"
           component="textarea"
           type="textarea"
           placeholder="Coin descriptions"
+          validate={[required]}
+        />
+        <FieldsForm
+          name="image"
+          label="Imagen"
+          component="file"
+          isFile
+          type="file"
+          placeholder="Upload the image"
         />
         <FieldsForm
           name="rating"
@@ -39,27 +55,6 @@ const GerneralInfo = () => (
           component="input"
           type="text"
           placeholder="Ico Time"
-        />
-        <FieldsForm
-          name="details_token"
-          label="Token"
-          component="input"
-          type="text"
-          placeholder="Coin token"
-        />
-        <FieldsForm
-          name="details_pre_ico_price"
-          label="Pre-ico Price"
-          component="input"
-          type="text"
-          placeholder="Pre-ico Price"
-        />
-        <FieldsForm
-          name="details_price"
-          label="Coins Price"
-          component="input"
-          type="text"
-          placeholder="Coins Price"
         />
       </CardBody>
     </Card>

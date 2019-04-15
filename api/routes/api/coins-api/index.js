@@ -1,15 +1,32 @@
-var express  = require('express')
-var router   = express.Router()
+const express  = require('express')
+const router   = express.Router()
 var _  = require('lodash')
-var mongoose = require('mongoose')
-var {Coins, createCoinSchema}    = require('../../../schemas/coins/index')
+const path = require('path')
+const multer = require('multer')
+const mongoose = require('mongoose')
+const {Coins, createCoinSchema}    = require('../../../schemas/coins/index')
+const upload = multer({ dest: '../../../public/coins/images/' })
+
+// const storage = multer.diskStorage({
+//   destination: '../../../public/coins/images/',
+//   filename   : function(req, file, cb) {
+//     cb(null,'IMAGE-' + Date.now() + path.extname(file.originalname))
+//   },
+//   onError: function(err, next) {
+//     console.log('error', err)
+//     next(err)
+//   }
+// })
+
+// const upload = multer({
+//   storage: storage,
+//   limits : {fileSize: 1000000}
+// }).array('image')
 
 /* GET home page. */
-
-
 router.get('/', function(req, res, next) {
 
-  Coins.find({}).limit(50).sort({_id: 1})
+  Coins.find({}).limit(50).sort({_id: -1})
     .exec(function(err, coins) {
       if(err) {res.json({message: 'error occured'})}
       else {
@@ -34,20 +51,16 @@ router.get('/:id', function(req, res, next) {
   Coins.findOne({
     _id: req.params.id
   }).exec(function(err, books) {
-    if(err) {
+    if(err) 
       res.status(404).json('Coin not found!!')
-    } else {
+    else
       // console.log(books)
       res.json(JSON.stringify(books))
-    }
   })
 })
 
-router.post('/', function(req, res, next) {
+router.post('/', upload.array('image', 120), function(req, res, next) {
 
-  console.log('======================================================================');
-  console.log(req.body);
-  console.log('======================================================================');
   var price_time = (undefined !== req.body.price_time) ? new Date(req.body.price_time) : new Date()
   var ico_time   = (undefined !== req.body.ico_time) ? new Date(req.body.ico_time) : new Date()
 
@@ -59,15 +72,24 @@ router.post('/', function(req, res, next) {
   var errorV = createCoinSchema.validate(req.body, {abortEarly: false})
     .then(validatedUser => {
       var newCoin = new Coins(req.body)
-      console.log(`user ${JSON.stringify(validatedUser)} created`)
-      console.log(errorV,'ERROR:::::::')
+      // console.log(`user ${JSON.stringify(validatedUser)} created`)
+      // console.log(errorV,'ERROR:::::::')
 
       newCoin.save(function(err, book) {
         if(err) {
           console.log(err)
           res.send('error saving book')
         } else {
-          console.log(book)
+          // console.log('===========================================')
+          // console.log('===========================================')
+          // console.log('===========================================')
+          // console.log(book)
+          // upload(req, res, (err) => {
+          //   console.log('Request file ---', req.body.image) // Here you get file.
+          //   /* Now do where ever you want to do*/
+          //   if(err)
+          //     console.log('ERROR: ', err) // return res.send(200).end()
+          // })
           res.status(200).json({message: 'Coin created successfully!!!'})
         }
       })
