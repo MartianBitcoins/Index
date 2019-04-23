@@ -7,6 +7,7 @@ export const CREATE_COINS = 'CREATE_COINS';
 // const BASE_URL = 'http://localhost:3000';
 
 export async function loadCoinsList(callback) {
+  console.log('loadCoinsList');
   await API.get('/api/coins').then(
     (response) => {
       if (response.success) {
