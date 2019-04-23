@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 })
 // API
 router.post('/api/ping', pingRoutes.ping)
-router.get('/api/coins')
+router.get('/api/coins', coinsGETSchema, coinsGET)
 
 // Web APP routes
 router.get('/', homeRoute)

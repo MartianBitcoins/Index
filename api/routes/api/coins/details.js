@@ -3,7 +3,7 @@ const expressAsyncHandler = require('express-async-handler')
 const logger = require('../../lib/logger')
 const render = require('../../lib/render')
 const moment = require('moment')
-var {Coins, createCoinSchema}    = require('../../schemas/coins/index')
+var {Coins, createCoinSchema}    = require('../../models/coins/index')
 
 // Change the Date Like Price Time, and ICO TIME information to show the user
 

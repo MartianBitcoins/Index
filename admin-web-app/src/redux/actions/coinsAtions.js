@@ -10,6 +10,7 @@ export async function loadCoinsList(callback) {
   await API.get('/api/coins').then(
     (response) => {
       if (response.success) {
+        console.log(response);
         return callback(response);
       }
       return response;
