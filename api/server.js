@@ -7,15 +7,15 @@ require('./lib/mongoose')
 const pingRoutes   = require('./routes/api/ping')
 const homeRoute    = require('./routes/home')
 const healthRoute  = require('./routes/health')
-const getCoinsPage = require('./routes/coins')
-const getByIdCoinsPage = require('./routes/coins/details')
-const coinsAPI         = require('./routes/api/coins-api/index')
-
-
+const coinsGET = require('./routes/api/coins/get')
+const coinsGETSchema = require('./routes/api/coins/getSchema')
+// const getCoinsPage = require('./routes/coins')
+// const getByIdCoinsPage = require('./routes/coins/details')
 // const coinsDetailsRoute = require('./routes/coins/details')
 
 const { api: { port: apiPort }, render: { host: renderHost, port: renderPort }} = require('./config')
 const internalErrorMiddleware = require('./middleware/internal-error')
+const parameterValidatorMiddleware = require('./middleware/parameter-validator')
 const logger = require('./lib/logger')
 const forwardGet = require('./lib/forwardHttp')
 
@@ -32,15 +32,16 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin,Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,Authorization')
   next()
 })
-// Test ping route
+// API
 router.post('/api/ping', pingRoutes.ping)
+router.get('/api/coins')
 
 // Web APP routes
 router.get('/', homeRoute)
 router.get('/health', healthRoute)
-router.get('/coins', getCoinsPage)
-router.get('/coins/:id', getByIdCoinsPage)
-app.use('/v1/api/coins', coinsAPI)
+// router.get('/coins', getCoinsPage)
+// router.get('/coins/:id', getByIdCoinsPage)
+// app.use('/v1/api/coins', coinsAPI)
 
 // Static files
 // Redirect the rest of the GET calls to the render server (serve static files)
@@ -51,6 +52,7 @@ router.get(
 )
 
 app.use(router)
+app.use(parameterValidatorMiddleware())
 app.use(internalErrorMiddleware())
 
 const server = http.createServer(app)

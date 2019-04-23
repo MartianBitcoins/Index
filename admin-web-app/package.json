@@ -8,6 +8,7 @@
     "bfj": "^6.1.1",
     "bootstrap": "^4.3.1",
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "celebrate": "^9.1.0",
     "chalk": "^2.4.2",
     "classnames": "^2.2.6",
     "dotenv": "^6.2.0",
