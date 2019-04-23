@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   Col, Container, Row, ButtonToolbar, Button,
 } from 'reactstrap';
-import { loadCoinsList } from '../../redux/actions/coinsAtions';
+import { loadCoinsList, deleteCoin } from '../../redux/actions/coinsAtions';
 import CoinsList from './components/CoinsList';
 
 
@@ -16,6 +16,21 @@ class CoinsPage extends Component {
       this.setState({
         listado: r.data,
       });
+    });
+  }
+
+  // eslint-disable-next-line react/sort-comp
+  async loadinitialData() {
+    await loadCoinsList((r) => {
+      this.setState({
+        listado: r.data,
+      });
+    });
+  }
+
+  coinDelete = (coinId) => {
+    deleteCoin(coinId, (r) => {
+      if (r.success) { this.loadinitialData(); }
     });
   }
 
@@ -41,7 +56,7 @@ class CoinsPage extends Component {
           </Col>
         </Row>
         <Row>
-          <CoinsList listado={listado} />
+          <CoinsList listado={listado} coinDelete={this.coinDelete} />
         </Row>
       </Container>
     );
@@ -57,6 +72,9 @@ const mapDispatchToProps = dispatch => (
   {
     loadCoinsList() {
       dispatch(loadCoinsList());
+    },
+    deleteCoin() {
+      dispatch(deleteCoin());
     },
   }
 );

@@ -3,6 +3,7 @@ import API from '../api/index';
 
 export const LOAD_COINS_LIST = 'LOAD_COINS_LIST';
 export const CREATE_COINS = 'CREATE_COINS';
+export const DELETE_COINS = 'DELETE_COINS';
 
 // const BASE_URL = 'http://localhost:3000';
 
@@ -36,5 +37,16 @@ export async function createCoins(data, callback) {
     response => (
       callback(response)
     ),
+  );
+}
+
+export async function deleteCoin(id, callback) {
+  await API.delete(`/v1/api/coins/${id}`).then(
+    (response) => {
+      if (response.success) {
+        return callback(response);
+      }
+      return response;
+    },
   );
 }

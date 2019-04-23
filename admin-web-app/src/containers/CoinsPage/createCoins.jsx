@@ -19,11 +19,9 @@ class CreateCoin extends Component {
   }
 
   sendindData = () => {
-    console.log(this.props, ' PROPPPPPPPPPS');
     if (undefined !== this.props) {
       // eslint-disable-next-line react/prop-types
       const { frm } = this.props;
-      console.log(frm.values, 'Antes de enciar');
       createCoins(frm.values, (r) => {
         console.log(r);
       });
@@ -54,13 +52,10 @@ class CreateCoin extends Component {
     );
   }
 }
-const mapStateToProps = (state) => {
-  console.log(state, 'mapStateToProps');
-  return {
-    coins: state.coins,
-    frm: state.form.create_coin,
-  };
-};
+const mapStateToProps = state => ({
+  coins: state.coins,
+  frm: state.form.create_coin,
+});
 const mapDispatchToProps = dispatch => (
   {
     createCoins() {
