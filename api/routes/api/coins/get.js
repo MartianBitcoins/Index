@@ -5,9 +5,7 @@ const Coins = require('../../../models/coins')
 
 async function getCoinsPage(req, res) {
   logger.info('getCoinsPage')
-  const coins = await Coins.find({}).limit(10)
-  logger.debug('coins===>', JSON.stringify({ coins }))
-
+  const coins = await Coins.find({}).limit(3)
   // coins.map((key)=>{
   //   objs = JSON.parse(JSON.stringify(key))
   //   objs.id = key._id

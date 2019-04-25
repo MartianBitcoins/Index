@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('load', () => {
       this.setState({ loading: false });
-      setTimeout(() => this.setState({ loaded: true }), 500);
+      setTimeout(() => this.setState({ loaded: true }), 300);
     });
   }
 
